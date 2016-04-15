@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="CCSDS_packet_header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Packet Header</cd:Description>
+  <cd:Field name="packet_version">
+    <cd:Integer>
+      <cd:Description>Packet Version Number</cd:Description>
+      <cd:BitSize>3</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="packet_type">
+    <cd:Integer>
+      <cd:Description>Packet Type</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="datafield_flag_header">
+    <cd:Integer>
+      <cd:Description>Data Field Flag Header</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="app_id_vcid">
+    <cd:Integer>
+      <cd:Description>Application ID (VCID)</cd:Description>
+      <cd:BitSize>6</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="app_id_ops_mode">
+    <cd:Integer>
+      <cd:Description>Application ID (OPS mode)</cd:Description>
+      <cd:BitSize>5</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="segmentation_flag">
+    <cd:Integer>
+      <cd:Description>Segmentation Flag</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sequence_counter">
+    <cd:Integer>
+      <cd:Description>Sequence Counter</cd:Description>
+      <cd:BitSize>14</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet Length</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

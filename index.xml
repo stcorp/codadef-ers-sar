@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="ERS_SAR" last-modified="2015-03-27">
+  <cd:Description>ERS SAR products using the ENVISAT format</cd:Description>
+  <cd:ProductType name="SAR_IM__0P">
+    <cd:Description>ERS SAR Level 0 Image Mode in ENVISAT format</cd:Description>
+    <cd:ProductDefinition id="SAR_IM__0P_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">SAR_IM__0P</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+</cd:ProductClass>

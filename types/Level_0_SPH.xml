@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="Level_0_SPH" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="sph_descriptor_title">
+    <cd:Text>
+      <cd:Description>SPH_DESCRIPTOR=</cd:Description>
+      <cd:FixedValue>SPH_DESCRIPTOR=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_1">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sph_descriptor">
+    <cd:Text>
+      <cd:Description>SPH Descriptor. ASCII string describing the product.</cd:Description>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_2">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_1">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_lat_title">
+    <cd:Text>
+      <cd:Description>START_LAT=</cd:Description>
+      <cd:FixedValue>START_LAT=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of the satellite nadir at the START_TIME. WGS84 latitude, positive = North</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_2">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_long_title">
+    <cd:Text>
+      <cd:Description>START_LONG=</cd:Description>
+      <cd:FixedValue>START_LONG=</cd:FixedValue>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_long">
+    <cd:Integer>
+      <cd:Description>Longitude of the satellite nadir at the START_TIME. WGS84 longitude, positive = East, 0 = Greenwich</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_3">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_lat_title">
+    <cd:Text>
+      <cd:Description>STOP_LAT=</cd:Description>
+      <cd:FixedValue>STOP_LAT=</cd:FixedValue>
+      <cd:ByteSize>9</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of the satellite nadir at the STOP_TIME. WGS84 latitude, positive = North</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stop_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_4">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_long_title">
+    <cd:Text>
+      <cd:Description>STOP_LONG=</cd:Description>
+      <cd:FixedValue>STOP_LONG=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_long">
+    <cd:Integer>
+      <cd:Description>Longitude of the satellite nadir at the STOP_TIME. WGS84 longitude, positive = East, 0 = Greenwich</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stop_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_long_term">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track_title">
+    <cd:Text>
+      <cd:Description>SAT_TRACK=</cd:Description>
+      <cd:FixedValue>SAT_TRACK=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track">
+    <cd:Float>
+      <cd:Description>Sub-satellite track heading at the Sensing Start time in the MPH</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sat_track_units">
+    <cd:Text>
+      <cd:FixedValue>\074deg\076</cd:FixedValue>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_6">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_7">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_errors_sig_title">
+    <cd:Text>
+      <cd:Description>ISP_ERRORS_SIGNIFICANT=</cd:Description>
+      <cd:FixedValue>ISP_ERRORS_SIGNIFICANT=</cd:FixedValue>
+      <cd:ByteSize>23</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_errors_significant">
+    <cd:Integer>
+      <cd:Description>1 or 0. 1 if number of ISPs with CRC errors exceeds threshold</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_8">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="missing_isps_sig_title">
+    <cd:Text>
+      <cd:Description>MISSING_ISPS_SIGNIFICANT=</cd:Description>
+      <cd:FixedValue>MISSING_ISPS_SIGNIFICANT=</cd:FixedValue>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="missing_isps_significant">
+    <cd:Integer>
+      <cd:Description>1 or 0. 1 if number of missing ISPs exceeds threshold</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_9">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_discard_sig_title">
+    <cd:Text>
+      <cd:Description>ISP_DISCARDED_SIGNIFICANT=</cd:Description>
+      <cd:FixedValue>ISP_DISCARDED_SIGNIFICANT=</cd:FixedValue>
+      <cd:ByteSize>26</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_discarded_significant">
+    <cd:Integer>
+      <cd:Description>1 or 0. 1 if number of ISPs discarded by the PF-HS exceeds threshold</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_10">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rs_sig_title">
+    <cd:Text>
+      <cd:Description>RS_SIGNIFICANT=</cd:Description>
+      <cd:FixedValue>RS_SIGNIFICANT=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rs_significant">
+    <cd:Integer>
+      <cd:Description>1 or 0. 1 if number of ISPs with Reed Solomon corrections exceeds threshold</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_11">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_12">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="number_err_isps_title">
+    <cd:Text>
+      <cd:Description>NUM_ERROR_ISPS=</cd:Description>
+      <cd:FixedValue>NUM_ERROR_ISPS=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="number_err_isps">
+    <cd:Integer>
+      <cd:Description>Number of ISPs containing CRC errors as reported by the FEP</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_13">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="err_isp_thresh_title">
+    <cd:Text>
+      <cd:Description>ERROR_ISPS_THRESH=</cd:Description>
+      <cd:FixedValue>ERROR_ISPS_THRESH=</cd:FixedValue>
+      <cd:ByteSize>18</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="error_isps_thresh">
+    <cd:Float>
+      <cd:Description>Threshold at which number of ISPs containing CRC errors is considered significant</cd:Description>
+      <cd:Unit>percent</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="err_isp_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\074%\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_14">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_missing_isps_title">
+    <cd:Text>
+      <cd:Description>NUM_MISSING_ISPS=</cd:Description>
+      <cd:FixedValue>NUM_MISSING_ISPS=</cd:FixedValue>
+      <cd:ByteSize>17</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_missing_isps">
+    <cd:Integer>
+      <cd:Description>Number of missing ISPs</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_15">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="missing_isps_thresh_title">
+    <cd:Text>
+      <cd:Description>MISSING_ISPS_THRESH=</cd:Description>
+      <cd:FixedValue>MISSING_ISPS_THRESH=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="missing_isps_thresh">
+    <cd:Float>
+      <cd:Description>Threshold at which number of ISPs missing is considered significant</cd:Description>
+      <cd:Unit>percent</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="missing_isps_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\074%\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_16">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_discard_title">
+    <cd:Text>
+      <cd:Description>NUM_DISCARDED_ISPS=</cd:Description>
+      <cd:FixedValue>NUM_DISCARDED_ISPS=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_discarded_isps">
+    <cd:Integer>
+      <cd:Description>Number of ISPs discarded by PF-HS</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_17">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="discard_thresh_title">
+    <cd:Text>
+      <cd:Description>DISCARDED_ISPS_THRESH=</cd:Description>
+      <cd:FixedValue>DISCARDED_ISPS_THRESH=</cd:FixedValue>
+      <cd:ByteSize>22</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="discarded_isps_thresh">
+    <cd:Float>
+      <cd:Description>Threshold at which number of ISPs discarded by PF-HS is considered significant</cd:Description>
+      <cd:Unit>percent</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="discard_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\074%\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_18">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_rs_title">
+    <cd:Text>
+      <cd:Description>NUM_RS_ISPS=</cd:Description>
+      <cd:FixedValue>NUM_RS_ISPS=</cd:FixedValue>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_rs_isps">
+    <cd:Integer>
+      <cd:Description>Number of ISPs with Reed Solomon corrections</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_19">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rs_thresh_title">
+    <cd:Text>
+      <cd:Description>RS_THRESH=</cd:Description>
+      <cd:FixedValue>RS_THRESH=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rs_thresh">
+    <cd:Float>
+      <cd:Description>Threshold at which number of ISPs discarded by PF-HS is considered significant</cd:Description>
+      <cd:Unit>percent</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rs_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\074%\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_20">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>100</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_21">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="tx_polar_title">
+    <cd:Text>
+      <cd:Description>TX_RX_POLAR=</cd:Description>
+      <cd:FixedValue>TX_RX_POLAR=</cd:FixedValue>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_3">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="tx_rx_polar">
+    <cd:Text>
+      <cd:Description>Transmitter / Receiver Polarization (used for ASAR only). Codes: 'HV/HV', 'V/VH ', 'H/HV ', 'H/V  ', 'H/H  ', 'V/V&amp;O  ', 'V/H  ' or '     ' for non-ASAR products. Letter(s) to left of '/' = tx polar, letter(s) to right of '/' = rx polar.</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_4">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_22">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="swath_title">
+    <cd:Text>
+      <cd:Description>SWATH=</cd:Description>
+      <cd:FixedValue>SWATH=</cd:FixedValue>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_5">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="swath">
+    <cd:Text>
+      <cd:Description>Swath Number (used for ASAR only)codes: 'IS1', 'IS2', 'IS3', 'IS4', 'IS5', 'IS6', 'IS7', 'WS '. WS is used for WS mode and GM mode, '   ' for non-ASAR products</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_6">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_23">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>41</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_24">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

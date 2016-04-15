@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SAR_IM__0P_v0" format="binary" last-modified="2015-03-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="Level_0_SPH"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[$num_dsd]]></cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="sar_source_packets">
+      <cd:Array>
+        <cd:Description>Level 0 MDSR</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[0]]]></cd:Dimension>
+        <cd:NamedType id="SAR_L0_MDSR"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[0] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[0]]]></cd:BitOffset>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsd">
+    <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_ds">
+    <cd:Init><![CDATA[$num_ds = 1]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_to_dsd_index">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[$ds_to_dsd_index[0] = index(/dsd, str(./ds_name) == "SAR_SOURCE_PACKETS          ")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_available">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_available[i] = if($ds_to_dsd_index[i] != -1 && !(bytes(/dsd[$ds_to_dsd_index[i]]/filename, 8) == "NOT USED"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_offset">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_offset[i] = 8 * int(/dsd[$ds_to_dsd_index[i]]/ds_offset)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = int(/dsd[$ds_to_dsd_index[i]]/num_dsr)]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

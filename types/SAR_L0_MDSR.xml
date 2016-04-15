@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SAR_L0_MDSR" last-modified="2015-03-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="isp_sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ISP Sensing Time</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="blank_0">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>96</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_length">
+    <cd:Integer>
+      <cd:Description>Length of the ISP = length of the source packet - 1 bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="blank_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="blank_2">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_0">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Raw>
+      <cd:Description>Instrument source packet</cd:Description>
+      <cd:BitSize>8 * (int(../isp_length) + 1)</cd:BitSize>
+    </cd:Raw>
+  </cd:Field>
+</cd:Record>
