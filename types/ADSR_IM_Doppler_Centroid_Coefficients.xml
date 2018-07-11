@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ADSR_IM_Doppler_Centroid_Coefficients" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="zero_doppler_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Zero Doppler azimuth time at which estimate applies</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment Flag (always set to zero for this ADSR)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="slant_range_time">
+    <cd:Float>
+      <cd:Description>2-way slant range time origin (t0)</cd:Description>
+      <cd:Unit>ns</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="dop_coef">
+    <cd:Array>
+      <cd:Description>Doppler centroid coefficients as a function of slant range time: D0, D1, D2, D3, and D4.where Doppler Centroid = D0 + D1(tSR-t0) + D2(tSR-t0)2 + D3(tSR-t0)3 + D4(tSR-t0)4 (unit: HzHz/sHz/s2Hz/s3Hz/s4)</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dop_conf">
+    <cd:Float>
+      <cd:Description>Doppler Centroid Confidence MeasureValue between 0 and 1, 0 = poorest confidence, 1= highest confidence</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="dop_thresh_flag">
+    <cd:Integer>
+      <cd:Description>Doppler Confidence Below Threshold Flag. 0 = confidence above threshold, Doppler Centroid calculated from data. 1 = confidence below threshold, Doppler Centroid calculated from orbit</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="delta_dopp_coeff">
+    <cd:Array>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Delta Doppler coefficents DelatD0(SS1) , DelatD0(SS2) DelatD0(SS3) DelatD0(SS4) DelatD0(SS5)</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>3*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

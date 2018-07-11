@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition format="binary" id="SAR_IMS_1P_v0" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="SPH_IM"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[$num_dsd]]></cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="mds1_sq_ads">
+      <cd:Array>
+        <cd:Description>SQ ADSRs</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[0]]]></cd:Dimension>
+        <cd:NamedType id="ADSR_IM_SQ"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="main_processing_params_ads">
+      <cd:Array>
+        <cd:Description>Main Processing parameters</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[1]]]></cd:Dimension>
+        <cd:NamedType id="ADSR_IM_Main_Processing_Parameters"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="dop_centroid_coeffs_ads">
+      <cd:Array>
+        <cd:Description>Doppler Centroid Parameters</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[2]]]></cd:Dimension>
+        <cd:NamedType id="ADSR_IM_Doppler_Centroid_Coefficients"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="chirp_params_ads">
+      <cd:Array>
+        <cd:Description>chirp parameters</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[3]]]></cd:Dimension>
+        <cd:NamedType id="ADSR_IM_Chirp_Parameters"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="geolocation_grid_ads">
+      <cd:Array>
+        <cd:Description>Geolocation Grid ADSRs</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[4]]]></cd:Dimension>
+        <cd:NamedType id="ADSR_IM_Geolocation_Grid"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="mds1">
+      <cd:Array>
+        <cd:Description>Measurement Data Set 1.</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[5]]]></cd:Dimension>
+        <cd:NamedType id="MDSR_IM_SLC"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="first_img_ds_index">
+    <cd:Init><![CDATA[$first_img_ds_index = 8]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_samples_per_line">
+    <cd:Dimension>1</cd:Dimension>
+    <cd:Init><![CDATA[$num_samples_per_line[0] = int(/sph/line_length)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dsd">
+    <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_ds">
+    <cd:Init><![CDATA[$num_ds = 6]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_to_dsd_index">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[$ds_to_dsd_index[0] = index(/dsd, str(./ds_name) == "MDS1 SQ ADS                 "); $ds_to_dsd_index[1] = index(/dsd, str(./ds_name) == "MAIN PROCESSING PARAMS ADS  "); $ds_to_dsd_index[2] = index(/dsd, str(./ds_name) == "DOP CENTROID COEFFS ADS     "); $ds_to_dsd_index[3] = index(/dsd, str(./ds_name) == "CHIRP PARAMS ADS            "); $ds_to_dsd_index[4] = index(/dsd, str(./ds_name) == "GEOLOCATION GRID ADS        "); $ds_to_dsd_index[5] = index(/dsd, str(./ds_name) == "MDS1                        ")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_available">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_available[i] = if($ds_to_dsd_index[i] != -1 && !(bytes(/dsd[$ds_to_dsd_index[i]]/filename, 8) == "NOT USED"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_offset">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_offset[i] = if($ds_available[i] == 1, 8 * int(/dsd[$ds_to_dsd_index[i]]/ds_offset), 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = if($ds_available[i] == 1, int(/dsd[$ds_to_dsd_index[i]]/num_dsr), 0)]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ADSR_IM_Antenna_Elevation_Pattern" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="zero_doppler_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Zero Doppler azimuth time at which estimate applies</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment Flag (always set to zero for this ADSR)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="beam_id">
+    <cd:Text format="ascii">
+      <cd:Description>Beam ID to which pattern applies SS1 to SS5 or NS</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="elevation_pattern">
+    <cd:Record>
+      <cd:Field name="slant_range_time">
+        <cd:Array>
+          <cd:Description>2 way slant range times</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>ns</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="elevation_angles">
+        <cd:Array>
+          <cd:Description>Corresponding elevation angles</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>degrees</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="antenna_pattern">
+        <cd:Array>
+          <cd:Description>Corresponding two-way antenna elevation pattern values</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>dB</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>14*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

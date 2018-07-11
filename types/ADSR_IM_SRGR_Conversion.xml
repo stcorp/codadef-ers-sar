@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ADSR_IM_SRGR_Conversion" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="zero_doppler_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Zero Doppler azimuth time at which estimate applies</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment Flag (always set to zero for this ADSR)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="slant_range_time">
+    <cd:Float>
+      <cd:Description>2 way slant range time to first range sample"</cd:Description>
+      <cd:Unit>ns</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ground_range_origin">
+    <cd:Float>
+      <cd:Description>Ground range origin of the polynomial (GR0) measured for the first pixel of the line</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="srgr_coeff">
+    <cd:Array>
+      <cd:Description>The coefficients S0, S1, S2, S3, and S4 of the ground range to slant range conversion polynomial. Slant range = S0 + S1(GR-GR0) + S2 (GR-GR0)2 + S3(GR-GR0)3 + S4(GR-GR0)4 (unit: m, m-1, m-2, m-3, m-4)</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>14*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

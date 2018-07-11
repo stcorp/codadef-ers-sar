@@ -10,4 +10,26 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="SAR_IMP_1P">
+    <cd:Description>ERS SAR Level 1 Precision Image Product</cd:Description>
+    <cd:ProductDefinition id="SAR_IMP_1P_v0" format="binary" version="0">
+      <cd:Description>This definition is based on version 3/1 of product specification PX-SP-50-9105</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">SAR_IMP_1P</cd:MatchData>
+        <cd:MatchData offset="95">PX-SP-50-9105_3/1      </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SAR_IMS_1P">
+    <cd:Description>ERS SAR Level 1 Single Look Complex Image Product</cd:Description>
+    <cd:ProductDefinition id="SAR_IMS_1P_v0" format="binary" version="0">
+      <cd:Description>This definition is based on version 3/1 of product specification PX-SP-50-9105</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">SAR_IMS_1P</cd:MatchData>
+        <cd:MatchData offset="95">PX-SP-50-9105_3/1      </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
 </cd:ProductClass>

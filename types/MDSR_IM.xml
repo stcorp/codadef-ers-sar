@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MDSR_IM" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="zero_doppler_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Zero Doppler Time (MJD format)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="line_num">
+    <cd:Integer>
+      <cd:Description>Range line number. Numbered sequentially, for each product (or slice) first range line in MDS is 1</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="proc_data">
+    <cd:Array>
+      <cd:Description>SAR Processed Data</cd:Description>
+      <cd:Dimension>$num_samples_per_line</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

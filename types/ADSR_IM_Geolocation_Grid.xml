@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ADSR_IM_Geolocation_Grid" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="first_zero_doppler_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Zero Doppler Time in azimuth of first line of the granule. Gives azimuth location of grid line for first line of the granule</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment Flag (set to 1 if all MDSRs corresponding to this ADSR are blank, set to zero otherwise).</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="line_num">
+    <cd:Integer>
+      <cd:Description>Range line number corresponding to the first line of the granule</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_lines">
+    <cd:Integer>
+      <cd:Description>Number of output lines in this granule</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sub_sat_track">
+    <cd:Float>
+      <cd:Description>Subsatellite track heading (relative to North) for first line of granule. This is the heading on the ground (includes Earth rotation).</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="first_line_tie_points">
+    <cd:Record>
+      <cd:Field name="samp_numbers">
+        <cd:Array>
+          <cd:Description>Range sample number. Gives the range location of the grid points. First range sample is 1, last is M. Zero filled samples are included.</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="slant_range_times">
+        <cd:Array>
+          <cd:Description>2 way slant range time to range sample</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>ns</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="angles">
+        <cd:Array>
+          <cd:Description>Incidence Angle at range sample</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>degrees</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="lats">
+        <cd:Array>
+          <cd:Description>geodetic latitude of range sample (positive north)</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="longs">
+        <cd:Array>
+          <cd:Description>geodetic longitude of range sample (positive east)</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>22*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_zero_doppler_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Zero doppler time for the last line of the granule</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="last_line_tie_points">
+    <cd:Record>
+      <cd:Field name="samp_numbers">
+        <cd:Array>
+          <cd:Description>Range sample number. Gives the range location of the grid points. First range sample is 1, last is M. Zero filled samples are included.</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="slant_range_times">
+        <cd:Array>
+          <cd:Description>2 way slant range time to range sample</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>ns</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="angles">
+        <cd:Array>
+          <cd:Description>Incidence Angle at range sample</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Float>
+            <cd:Unit>degrees</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="lats">
+        <cd:Array>
+          <cd:Description>geodetic latitude of range sample (positive north)</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="longs">
+        <cd:Array>
+          <cd:Description>geodetic longitude of range sample (positive east)</cd:Description>
+          <cd:Dimension>11</cd:Dimension>
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="swath_number">
+    <cd:Text format="ascii">
+      <cd:Description>Swath number IS1, IS2, IS3, IS4, IS5, IS6, or IS7 for IM, WV and AP modes. SS1, SS2, SS3, SS4, or SS5 for WSS products. WS for WS and GM modes where only one ADSR for the whole scene is provided.</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>19*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,1212 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="SPH_IM" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="sph_descriptor_title">
+    <cd:Text>
+      <cd:Description>SPH_DESCRIPTOR=</cd:Description>
+      <cd:FixedValue>SPH_DESCRIPTOR=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_1">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sph_descriptor">
+    <cd:Text>
+      <cd:Description>SPH descriptor is an ascii description of the product</cd:Description>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_2">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_1">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stripline_continuity_indicator_title">
+    <cd:Text>
+      <cd:Description>STRIPLINE_CONTINUITY_INDICATOR=</cd:Description>
+      <cd:FixedValue>STRIPLINE_CONTINUITY_INDICATOR=</cd:FixedValue>
+      <cd:ByteSize>31</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stripline_continuity_indicator">
+    <cd:Integer>
+      <cd:Description>Value: 0 = No stripline continuity, the product is a complete segment Other: Stripline Counter</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_2">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="slice_position_title">
+    <cd:Text>
+      <cd:Description>SLICE_POSITION=</cd:Description>
+      <cd:FixedValue>SLICE_POSITION=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="slice_position">
+    <cd:Integer>
+      <cd:Description>Value: +001  to NUM_SLICES Default value if no stripline continuity = +001</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_3">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_slices_title">
+    <cd:Text>
+      <cd:Description>NUM_SLICES=</cd:Description>
+      <cd:FixedValue>NUM_SLICES=</cd:FixedValue>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_slices">
+    <cd:Integer>
+      <cd:Description>Number of slices in this stripline Default value if no continuity = +001</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_4">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_line_time_title">
+    <cd:Text>
+      <cd:Description>FIRST_LINE_TIME=</cd:Description>
+      <cd:FixedValue>FIRST_LINE_TIME=</cd:FixedValue>
+      <cd:ByteSize>16</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_3">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_line_time">
+    <cd:Time timeformat="ascii_envisat_datetime">
+      <cd:Description>First Zero Doppler Azimuth time of product</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quote_4">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_5">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_line_time_title">
+    <cd:Text>
+      <cd:Description>LAST_LINE_TIME=</cd:Description>
+      <cd:FixedValue>LAST_LINE_TIME=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_5">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_line_time">
+    <cd:Time timeformat="ascii_envisat_datetime">
+      <cd:Description>Last Zero Doppler Azimuth time of product</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quote_6">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_6">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_near_lat_title">
+    <cd:Text>
+      <cd:Description>FIRST_NEAR_LAT=</cd:Description>
+      <cd:FixedValue>FIRST_NEAR_LAT=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_near_lat">
+    <cd:Integer>
+      <cd:Description>Geodetic Latitude of the first sample of the first line. A negative value denotes south latitude, a positive value denotes North latitude</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_near_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_7">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_near_long_title">
+    <cd:Text>
+      <cd:Description>FIRST_NEAR_LONG=</cd:Description>
+      <cd:FixedValue>FIRST_NEAR_LONG=</cd:FixedValue>
+      <cd:ByteSize>16</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_near_long">
+    <cd:Integer>
+      <cd:Description>East Geodetic Longitude of the first sample of the first line. Positive values East of Greenwich, negative values west of Greenwich</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_near_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_8">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_mid_lat_title">
+    <cd:Text>
+      <cd:Description>FIRST_MID_LAT=</cd:Description>
+      <cd:FixedValue>FIRST_MID_LAT=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_mid_lat">
+    <cd:Integer>
+      <cd:Description>Geodetic Latitude of the middle sample of the first line. A negative value denotes south latitude, a positive value denotes North latitude</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_mid_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_9">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_mid_long_title">
+    <cd:Text>
+      <cd:Description>FIRST_MID_LONG=</cd:Description>
+      <cd:FixedValue>FIRST_MID_LONG=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_mid_long">
+    <cd:Integer>
+      <cd:Description>East Geodetic Longitude of the middle sample of the first line. Positive values East of Greenwich, negative values west of Greenwich</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_mid_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_10">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_far_lat_title">
+    <cd:Text>
+      <cd:Description>FIRST_FAR_LAT=</cd:Description>
+      <cd:FixedValue>FIRST_FAR_LAT=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_far_lat">
+    <cd:Integer>
+      <cd:Description>Geodetic Latitude of the last sample of the first line. A negative value denotes south latitude, a positive value denotes North latitude</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_far_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_11">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_far_long_title">
+    <cd:Text>
+      <cd:Description>FIRST_FAR_LONG=</cd:Description>
+      <cd:FixedValue>FIRST_FAR_LONG=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_far_long">
+    <cd:Integer>
+      <cd:Description>East Geodetic Longitude of the last sample of the first line. Positive values East of Greenwich, negative values west of Greenwich</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_far_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_12">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_near_lat_title">
+    <cd:Text>
+      <cd:Description>LAST_NEAR_LAT=</cd:Description>
+      <cd:FixedValue>LAST_NEAR_LAT=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_near_lat">
+    <cd:Integer>
+      <cd:Description>Geodetic Latitude of the first sample of the last line. A negative value denotes south latitude, a positive value denotes North latitude</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_near_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_13">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_near_long_title">
+    <cd:Text>
+      <cd:Description>LAST_NEAR_LONG=</cd:Description>
+      <cd:FixedValue>LAST_NEAR_LONG=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_near_long">
+    <cd:Integer>
+      <cd:Description>East Geodetic Longitude of the first sample of the last line. Positive values East of Greenwich, negative values west of Greenwich</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_near_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_14">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_mid_lat_title">
+    <cd:Text>
+      <cd:Description>LAST_MID_LAT=</cd:Description>
+      <cd:FixedValue>LAST_MID_LAT=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_mid_lat">
+    <cd:Integer>
+      <cd:Description>Geodetic Latitude of the middle sample of the last line. A negative value denotes south latitude, a positive value denotes North latitude</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_mid_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_15">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_mid_long_title">
+    <cd:Text>
+      <cd:Description>LAST_MID_LONG=</cd:Description>
+      <cd:FixedValue>LAST_MID_LONG=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_mid_long">
+    <cd:Integer>
+      <cd:Description>East Geodetic Longitude of the middle sample of the last line. Positive values East of Greenwich, negative values west of Greenwich</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_mid_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_16">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_far_lat_title">
+    <cd:Text>
+      <cd:Description>LAST_FAR_LAT=</cd:Description>
+      <cd:FixedValue>LAST_FAR_LAT=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_far_lat">
+    <cd:Integer>
+      <cd:Description>Geodetic Latitude of the last sample of the last line. A negative value denotes south latitude, a positive value denotes North latitude</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_far_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_17">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_far_long_title">
+    <cd:Text>
+      <cd:Description>LAST_FAR_LONG=</cd:Description>
+      <cd:FixedValue>LAST_FAR_LONG=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_far_long">
+    <cd:Integer>
+      <cd:Description>East Geodetic Longitude of the last sample of the last line. Positive values East of Greenwich, negative values west of Greenwich</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_far_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_18">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>35</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_19">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="swath_title">
+    <cd:Text>
+      <cd:Description>SWATH=</cd:Description>
+      <cd:FixedValue>SWATH=</cd:FixedValue>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_7">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="swath">
+    <cd:Text format="ascii">
+      <cd:Description>Swath number IS1, IS2, IS3, IS4, IS5, IS6, or IS7 for IM, and AP modes. Set to 'WS ' for WS and GM modes.</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_8">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_20">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="pass_title">
+    <cd:Text>
+      <cd:Description>PASS=</cd:Description>
+      <cd:FixedValue>PASS=</cd:FixedValue>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_9">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="pass">
+    <cd:Text>
+      <cd:Description>Ascending or descending orbit designator (defined at start of time pass). "ASCENDING ", "DESCENDING" or "FULL ORBIT"</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_10">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_21">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sample_type_title">
+    <cd:Text>
+      <cd:Description>SAMPLE_TYPE=</cd:Description>
+      <cd:FixedValue>SAMPLE_TYPE=</cd:FixedValue>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_11">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sample_type">
+    <cd:Text>
+      <cd:Description>Detected or complex sample type designator, "DETECTED" or "COMPLEX ".</cd:Description>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_12">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_22">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="algorithm_title">
+    <cd:Text>
+      <cd:Description>ALGORITHM=</cd:Description>
+      <cd:FixedValue>ALGORITHM=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_13">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="algorithm">
+    <cd:Text>
+      <cd:Description>Processing algorithm used, "RAN/DOP" or "SPECAN "</cd:Description>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_14">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_23">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mds1_tx_rx_polar_title">
+    <cd:Text>
+      <cd:Description>MDS1_TX_RX_POLAR=</cd:Description>
+      <cd:FixedValue>MDS1_TX_RX_POLAR=</cd:FixedValue>
+      <cd:ByteSize>17</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_15">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mds1_tx_rx_polar">
+    <cd:Text>
+      <cd:Description>Transmitter/Receiver Polarization for MDS1, H/V or H/H or V/H or V/V</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_16">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_24">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mds2_tx_rx_polar_title">
+    <cd:Text>
+      <cd:Description>MDS2_TX_RX_POLAR=</cd:Description>
+      <cd:FixedValue>MDS2_TX_RX_POLAR=</cd:FixedValue>
+      <cd:ByteSize>17</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_17">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mds2_tx_rx_polar">
+    <cd:Text>
+      <cd:Description>Transmitter/Receiver Polarization for MDS2, H/V or H/H or V/H or V/V or blank for all modes with only one MDS</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_18">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_25">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="compression_title">
+    <cd:Text>
+      <cd:Description>COMPRESSION=</cd:Description>
+      <cd:FixedValue>COMPRESSION=</cd:FixedValue>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_19">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="compression">
+    <cd:Text>
+      <cd:Description>Compressionalgorithm used on echo data on-board the satellite, FBAQ2, FBAQ3, FBAQ4 (FBAQ: 8 bits reduced to 2,3, and 4 bits respectively). Others: "S&amp;M4 " and "NONE "</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_20">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_26">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="azimuth_looks_title">
+    <cd:Text>
+      <cd:Description>AZIMUTH_LOOKS=</cd:Description>
+      <cd:FixedValue>AZIMUTH_LOOKS=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="azimuth_looks">
+    <cd:Integer>
+      <cd:Description>Number of looks in azimuth</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_27">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="range_looks_title">
+    <cd:Text>
+      <cd:Description>RANGE_LOOKS=</cd:Description>
+      <cd:FixedValue>RANGE_LOOKS=</cd:FixedValue>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="range_looks">
+    <cd:Integer>
+      <cd:Description>Number of looks in range</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_28">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="range_spacing_title">
+    <cd:Text>
+      <cd:Description>RANGE_SPACING=</cd:Description>
+      <cd:FixedValue>RANGE_SPACING=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="range_spacing">
+    <cd:Float>
+      <cd:Description>Range sample spacing in meters</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="range_spacing_units">
+    <cd:Text>
+      <cd:FixedValue>\074m\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_29">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="azimuth_spacing_title">
+    <cd:Text>
+      <cd:Description>AZIMUTH_SPACING=</cd:Description>
+      <cd:FixedValue>AZIMUTH_SPACING=</cd:FixedValue>
+      <cd:ByteSize>16</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="azimuth_spacing">
+    <cd:Float>
+      <cd:Description>Nominal azimuth sample spacing in meters</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="azimuth_spacing_units">
+    <cd:Text>
+      <cd:FixedValue>\074m\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_30">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="line_time_interval_title">
+    <cd:Text>
+      <cd:Description>LINE_TIME_INTERVAL=</cd:Description>
+      <cd:FixedValue>LINE_TIME_INTERVAL=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="line_time_interval">
+    <cd:Float>
+      <cd:Description>Azimuth sample spacing in time (Line Time Interval)</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="line_time_interval_units">
+    <cd:Text>
+      <cd:FixedValue>\074s\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_31">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="line_length_title">
+    <cd:Text>
+      <cd:Description>LINE_LENGTH=</cd:Description>
+      <cd:FixedValue>LINE_LENGTH=</cd:FixedValue>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="line_length">
+    <cd:Integer>
+      <cd:Description>Number of samples per output line (includes zero filled samples)</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="line_length_units">
+    <cd:Text>
+      <cd:FixedValue>\074samples\076</cd:FixedValue>
+      <cd:ByteSize>9</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_32">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="data_type_title">
+    <cd:Text>
+      <cd:Description>DATA_TYPE=</cd:Description>
+      <cd:FixedValue>DATA_TYPE=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_21">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="data_type">
+    <cd:Text>
+      <cd:Description>Output data type. "SWORD", "UWORD", or "UBYTE"</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_22">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_33">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_34">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

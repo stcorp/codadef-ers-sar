@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ADSR_IM_Chirp_Parameters" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="zero_doppler_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Zero Doppler azimuth time at which estimate applies</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment Flag (always set to zero for this ADSR)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="beam_id">
+    <cd:Text format="ascii">
+      <cd:Description>Beam ID: SS1, SS2, SS3, SS4, or SS5 for WS and GM images. Set to NS and Oslash; for AP, IM, and WV images</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="polar">
+    <cd:Text format="ascii">
+      <cd:Description>Tx/Rx polarization H/H, H/V, V/V, or V/H</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="chirp_width">
+    <cd:Float>
+      <cd:Description>3-dB pulse width of chirp replica cross-correlation function between  extract chirp and nominal chirp</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="chirp_sidelobe">
+    <cd:Float>
+      <cd:Description>First side lobe level of chirp replica cross-correlation function between  reconstructed chirp and nominal chirp</cd:Description>
+      <cd:Unit>dB</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="chirp_islr">
+    <cd:Float>
+      <cd:Description>ISLR of chirp replica cross-correlation function between  reconstructed chirp and nominal chirp</cd:Description>
+      <cd:Unit>dB</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="chirp_peak_loc">
+    <cd:Float>
+      <cd:Description>Peak location of cross-correlation function between  reconstructed chirp and nominal chirp</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="re_chirp_power">
+    <cd:Float>
+      <cd:Description>Reconstrcted Chirp power</cd:Description>
+      <cd:Unit>dB</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="elev_chirp_power">
+    <cd:Float>
+      <cd:Description>Equivalent chirp Power</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="chirp_quality_flag">
+    <cd:Integer>
+      <cd:Description>Reconstructed chirp exceeds quality thresholds. 0 = reconstructed chirp below quality thresholds, current chirp is the nominal chirp. 1 = reconstructed chirp above quality thresholds, current chirp is the reconstructed chirp.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ref_chirp_power">
+    <cd:Float>
+      <cd:Description>Reference chirp Power</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="normalization_source">
+    <cd:Text format="ascii">
+      <cd:Description>Normalization source "REPLICA", "REF    ", "EQV    ", "NONE    "</cd:Description>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>4*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="cal_pulse_info">
+    <cd:Array>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="max_cal">
+          <cd:Array>
+            <cd:Description>Max of Cal pulses 1, 2, and 3 amplitude (record 1)</cd:Description>
+            <cd:Dimension>3</cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="avg_cal">
+          <cd:Array>
+            <cd:Description>Average of Cal pulse 1, 2, and 3 amplitude over the 3 dB on either side of the max amplitude (record 1)</cd:Description>
+            <cd:Dimension>3</cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="avg_val_1a">
+          <cd:Float>
+            <cd:Description>Average of Cal pulse 1A over the sample window (record 1)</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="phs_cal">
+          <cd:Array>
+            <cd:Description>Extracted phase for calibration pulse 1, 1A, 2, and 3 (record 1)</cd:Description>
+            <cd:Dimension>4</cd:Dimension>
+            <cd:Float>
+              <cd:Unit>degrees</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
