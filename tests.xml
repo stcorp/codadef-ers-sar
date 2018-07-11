@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ct:Tests last-modified="2018-07-09" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <ct:Test name="FileNameCheck" criticality="Error" description="The name of the file should be consistent with the product name in the header"><![CDATA[filename() == str(.)]]></ct:Test>
+  <ct:Test name="QualityFlag" description="This quality flag should be 0" criticality="Warning"><![CDATA[int(.) == 0]]></ct:Test>
+</ct:Tests>

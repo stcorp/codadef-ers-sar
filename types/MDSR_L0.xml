@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="SAR_L0_MDSR" last-modified="2015-03-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="MDSR_L0" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="isp_sensing_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>ISP Sensing Time</cd:Description>

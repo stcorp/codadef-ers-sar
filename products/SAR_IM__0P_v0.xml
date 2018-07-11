@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="SAR_IM__0P_v0" format="binary" last-modified="2015-03-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="SAR_IM__0P_v0" format="binary" last-modified="2018-07-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record format="binary">
     <cd:Field name="mph">
       <cd:NamedType id="MPH"/>
     </cd:Field>
     <cd:Field name="sph">
-      <cd:NamedType id="Level_0_SPH"/>
+      <cd:NamedType id="SPH_L0"/>
     </cd:Field>
     <cd:Field name="dsd">
       <cd:Array format="ascii">
@@ -17,7 +17,7 @@
       <cd:Array>
         <cd:Description>Level 0 MDSR</cd:Description>
         <cd:Dimension><![CDATA[$num_dsr[0]]]></cd:Dimension>
-        <cd:NamedType id="SAR_L0_MDSR"/>
+        <cd:NamedType id="MDSR_L0"/>
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[0] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[0]]]></cd:BitOffset>

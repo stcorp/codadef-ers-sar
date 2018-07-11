@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="ascii" name="MPH" last-modified="2010-08-26">
+<cd:Record format="ascii" name="MPH" last-modified="2018-07-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="product_name_title">
     <cd:Text>
       <cd:Description>PRODUCT=</cd:Description>
@@ -23,6 +23,7 @@
       <cd:Description>Product File name</cd:Description>
       <cd:ByteSize>62</cd:ByteSize>
       <cd:NativeType>string</cd:NativeType>
+      <ct:NamedTest id="FileNameCheck"/>
     </cd:Text>
   </cd:Field>
   <cd:Field name="quote_2">
@@ -1099,6 +1100,7 @@
       <cd:Description>1 or 0. If 1, errors have been reported in the product. User should then refer to the SPH or Summary Quality ADS of the product for details of the error condition. If not used, set to 0.</cd:Description>
       <cd:ByteSize>1</cd:ByteSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="QualityFlag"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_35">
